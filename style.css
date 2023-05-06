@@ -2435,6 +2435,11 @@ button:active {
 
 
 
+.lcars-text-bar span a{
+	text-decoration: none;
+}
+
+
 
 /* QUIZ */
 
