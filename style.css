@@ -2432,3 +2432,69 @@ button:active {
 .hidden{
 	display: none;
 }
+
+
+
+
+/* QUIZ */
+
+/* (A) WRAPPER */
+#quizWrap {
+	max-width: 600px;
+	margin: 0 auto;
+	/* RECOMMENDED FIXED HEIGHT IF YOU HAVE CONTENT BELOW THE QUIZ */
+	/* SO THAT PAGE LAYOUT DOES NOT "JUMP" */
+	/* height: 250px; */
+	margin-bottom: 50px;
+  }
+  
+  /* (B) QUESTION */
+  #quizQn {
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: #6cf;
+	/* background: #4c93ba;
+	color: #fff;
+	border-radius: 10px; */
+  }
+  
+  /* (C) ANSWERS */
+  #quizAns {
+	margin: 10px 0;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+  }
+  #quizAns input[type=radio] { display: none; }
+  #quizAns label {
+	color: #000;
+	background: #58e;
+	border: 1px solid #58e;
+	border-radius: 0px;
+	padding: 10px;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	
+  }
+  #quizAns label.correct {
+	background: #0b0;
+	border: 1px solid #0b0;
+  }
+  #quizAns label.wrong {
+	background: #f00;
+	border: 1px solid #f00;
+  }
+
+  label:hover{
+	filter: brightness(115%);
+	animation: none;
+  }
+  label:active {
+	filter: brightness(80%);
+	outline: none;
+  }
