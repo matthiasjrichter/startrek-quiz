@@ -9,14 +9,15 @@ var quiz = {
       a: 1, // arrays start with 0, so answer is Data
     },
     {
-      q: "What is the name of the Klingon home world?",
-      o: ["Romulus", "Risa", "Ferenginar", "Qo'noS"],
+      q: "What is the name of the secret organization that works behind the scenes to protect the Federation?",
+      // o: ["Starfleet Intelligence", "Obsidian Order", "Tal Shiar", "Section 31"],
+      o: ["Head of Intelligence", "Article 47", "100th Div", "Section 31"],
       a: 3,
     },
     {
-      q: "Who is the former Borg drone who joins the crew of the Enterprise?",
-      o: ["Seven of Nine", "Icheb", "Hugh", "Elon"],
-      a: 2,
+      q: "What is the name of the Klingon home world?",
+      o: ["Romulus", "Risa", "Ferenginar", "Qo'noS"],
+      a: 3,
     },
     {
       q: "What is the name of the superweapon capable of destroying entire planets?",
@@ -24,9 +25,9 @@ var quiz = {
       a: 0,
     },
     {
-      q: "What is the name of the secret organization that works behind the scenes to protect the Federation?",
-      o: ["Starfleet Intelligence", "Obsidian Order", "Tal Shiar", "Section 31"],
-      a: 3,
+      q: "Who is the former Borg drone who joins the crew of the Enterprise?",
+      o: ["Seven of Nine", "Icheb", "Hugh", "Elon"],
+      a: 2,
     },
   ],
 
@@ -79,6 +80,7 @@ var quiz = {
         quiz.select(label);
       });
       quiz.hAns.appendChild(label);
+      document.querySelector("#qCounter").innerText= ` Star Trek Quiz • Q ${quiz.now + 1}/${quiz.data.length}` //MJR added question counter
     }
   },
 
@@ -93,10 +95,11 @@ var quiz = {
     // (D2) CHECK IF CORRECT
     let correct = option.dataset.idx == quiz.data[quiz.now].a;
     if (correct) {
-      quiz.score++;
-      option.classList.add("correct");
+      quiz.score++; //add point
+      option.classList.add("correct"); //make green
     } else {
-      option.classList.add("wrong");
+      option.classList.add("wrong"); //make red
+
     }
 
     // (D3) NEXT QUESTION OR END GAME
@@ -105,10 +108,10 @@ var quiz = {
       if (quiz.now < quiz.data.length) {
         quiz.draw();
       } else {
-        quiz.hQn.innerHTML = `You have answered ${quiz.score} of ${quiz.data.length} correctly.`;
+        quiz.hQn.innerHTML = `You answered ${quiz.score} out of ${quiz.data.length} questions correctly.`;
         quiz.hAns.innerHTML = "";
       }
-    }, 1000);
+    }, 1000); //time to be auto-forwarded to next question
   },
 
   // (E) RESTART QUIZ
