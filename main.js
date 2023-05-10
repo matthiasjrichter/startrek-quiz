@@ -97,9 +97,10 @@ var quiz = {
     if (correct) {
       quiz.score++; //add point
       option.classList.add("correct"); //make green
+      option.innerText+=" \u2714"
     } else {
       option.classList.add("wrong"); //make red
-
+      option.innerText+=" \uFF58"
     }
 
     // (D3) NEXT QUESTION OR END GAME

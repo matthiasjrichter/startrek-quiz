@@ -2493,6 +2493,7 @@ button:active {
   #quizAns label.wrong {
 	background: #f00;
 	border: 1px solid #f00;
+	/* text-decoration: line-through; */
   }
 
   label:hover{
