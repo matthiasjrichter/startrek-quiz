@@ -29,6 +29,11 @@ var quiz = {
       o: ["Seven of Nine", "Icheb", "Hugh", "Elon"],
       a: 2,
     },
+    {
+      q: "How many lights are there?",
+      o: ["1", "2", "3", "4"],
+      a: 3,
+    },
   ],
 
   // (A2) HTML ELEMENTS
