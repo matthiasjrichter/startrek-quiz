@@ -2443,17 +2443,17 @@ button:active {
 
 /* QUIZ */
 
-/* (A) WRAPPER */
+/* quiz wrapper */
 #quizWrap {
 	max-width: 600px;
 	margin: 0 auto;
 	/* RECOMMENDED FIXED HEIGHT IF YOU HAVE CONTENT BELOW THE QUIZ */
 	/* SO THAT PAGE LAYOUT DOES NOT "JUMP" */
-	/* height: 250px; */
+	height: 300px;
 	margin-bottom: 50px;
   }
   
-  /* (B) QUESTION */
+  /* quiz question */
   #quizQn {
 	font-size: 30px;
 	text-align: center;
@@ -2461,12 +2461,11 @@ button:active {
 	text-transform: uppercase;
 	line-height: 1.2;
 	color: #6cf;
-	/* background: #4c93ba;
-	color: #fff;
-	border-radius: 10px; */
+	height: 60%;
+	margin: auto;
   }
   
-  /* (C) ANSWERS */
+  /* quiz answers */
   #quizAns {
 	margin: 10px 0;
 	display: grid;
@@ -2493,7 +2492,6 @@ button:active {
   #quizAns label.wrong {
 	background: #f00;
 	border: 1px solid #f00;
-	/* text-decoration: line-through; */
   }
 
   label:hover{

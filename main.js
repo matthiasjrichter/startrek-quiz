@@ -1,7 +1,7 @@
 var quiz = {
-  // (A) PROPERTIES
-  // (A1) QUESTIONS & ANSWERS
-  // Q = QUESTION, O = OPTIONS, A = CORRECT ANSWER
+
+  // questions
+  // q: uestion, 0: options, a: index of correct answer
   data: [
     {
       q: "Who is the android officer on the Enterprise?",
@@ -10,7 +10,6 @@ var quiz = {
     },
     {
       q: "What is the name of the secret organization that works behind the scenes to protect the Federation?",
-      // o: ["Starfleet Intelligence", "Obsidian Order", "Tal Shiar", "Section 31"],
       o: ["Head of Intelligence", "Article 47", "100th Div", "Section 31"],
       a: 3,
     },
@@ -31,45 +30,45 @@ var quiz = {
     },
     {
       q: "How many lights are there?",
-      o: ["1", "2", "3", "4"],
-      a: 3,
+      o: ["1", "2", "4", "5"],
+      a: 2,
     },
   ],
 
-  // (A2) HTML ELEMENTS
+  // HTML elements
   hWrap: null, // HTML quiz container
   hQn: null, // HTML question wrapper
   hAns: null, // HTML answers wrapper
 
-  // (A3) GAME FLAGS
+  // flags
   now: 0, // current question
   score: 0, // current score
 
-  // (B) INIT QUIZ HTML
+  // initialize quiz HTML
   init: () => {
-    // (B1) WRAPPER
+    // wrapper
     quiz.hWrap = document.getElementById("quizWrap");
 
-    // (B2) QUESTIONS SECTION
+    // question section
     quiz.hQn = document.createElement("div");
     quiz.hQn.id = "quizQn";
     quiz.hWrap.appendChild(quiz.hQn);
 
-    // (B3) ANSWERS SECTION
+    // answers section
     quiz.hAns = document.createElement("div");
     quiz.hAns.id = "quizAns";
     quiz.hWrap.appendChild(quiz.hAns);
 
-    // (B4) GO!
+    // let's go!
     quiz.draw();
   },
 
-  // (C) DRAW QUESTION
+  // draw question
   draw: () => {
-    // (C1) QUESTION
+    // question
     quiz.hQn.innerHTML = quiz.data[quiz.now].q;
 
-    // (C2) OPTIONS
+    // optuins (buttons)
     quiz.hAns.innerHTML = "";
     for (let i in quiz.data[quiz.now].o) {
       let radio = document.createElement("input");
@@ -85,19 +84,19 @@ var quiz = {
         quiz.select(label);
       });
       quiz.hAns.appendChild(label);
-      document.querySelector("#qCounter").innerText= ` Star Trek Quiz • Q ${quiz.now + 1}/${quiz.data.length}` //MJR added question counter
+      document.querySelector("#qCounter").innerText= ` Star Trek Quiz \u2022 Q ${quiz.now + 1}/${quiz.data.length}` //added question counter
     }
   },
 
-  // (D) OPTION SELECTED
+  // option (button) selected
   select: (option) => {
-    // (D1) DETACH ALL ONCLICK
+    // detach all on click
     let all = quiz.hAns.getElementsByTagName("label");
     for (let label of all) {
       label.removeEventListener("click", quiz.select);
     }
 
-    // (D2) CHECK IF CORRECT
+    // check if answer correct
     let correct = option.dataset.idx == quiz.data[quiz.now].a;
     if (correct) {
       quiz.score++; //add point
@@ -108,7 +107,7 @@ var quiz = {
       option.innerText+=" \uFF58"
     }
 
-    // (D3) NEXT QUESTION OR END GAME
+    // next question or end game?
     quiz.now++;
     setTimeout(() => {
       if (quiz.now < quiz.data.length) {
