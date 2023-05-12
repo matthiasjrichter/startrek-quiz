@@ -560,7 +560,7 @@ a:active {
 }
 
 .block-4b {
-	/* flex-1; */
+	flex-1;
 	padding-top: 12px;
 }
 
@@ -2504,3 +2504,14 @@ button:active {
 	filter: brightness(80%);
 	outline: none;
   }
+
+
+
+  @media only screen and (max-width: 600px) {
+	#quizQn {
+		font-size: 20px;
+	}
+	#quizAns label {
+		font-size: 20px;
+	}
+}
