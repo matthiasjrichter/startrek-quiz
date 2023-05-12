@@ -560,7 +560,7 @@ a:active {
 }
 
 .block-4b {
-	flex-1;
+	/* flex-1; */
 	padding-top: 12px;
 }
 
