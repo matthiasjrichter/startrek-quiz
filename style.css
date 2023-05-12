@@ -555,12 +555,12 @@ a:active {
 }
 
 .block-4 {
-	flex-1;
+	/* flex-1; */
 	padding-top: 30px;
 }
 
 .block-4b {
-	flex-1;
+	/* flex-1; */
 	padding-top: 12px;
 }
 
@@ -2449,7 +2449,7 @@ button:active {
 	margin: 0 auto;
 	/* RECOMMENDED FIXED HEIGHT IF YOU HAVE CONTENT BELOW THE QUIZ */
 	/* SO THAT PAGE LAYOUT DOES NOT "JUMP" */
-	height: 300px;
+	height: 350px;
 	margin-bottom: 50px;
   }
   
@@ -2464,6 +2464,8 @@ button:active {
 	height: 60%;
 	margin: auto;
   }
+
+
   
   /* quiz answers */
   #quizAns {
