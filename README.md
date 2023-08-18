@@ -9,7 +9,6 @@ I built this for the #10DayWebBuild challenge
 **Tech used:** HTML, CSS, JavaScript
 
 The design is based on https://www.thelcars.com/. But heavily modified.
-No frameworks used.
 
 
 ## Optimizations
@@ -25,7 +24,7 @@ The CSS code is very messy. There is a lot of unused CSS and I feel sorry for an
 1. User feedback is super important. I thought I had thought of everything until I got reports from my non-technical beta testers.
 2. https://www.thelcars.com/ is a really great template, but in hindsight it would have been easier to code the CSS from scratch and just copy and paste the relevant parts.
 
-## Examples:
+## Related stuff I built:
 You might be interested in my additions to the https://www.thelcars.com/ template: 
 **GitHub:** https://github.com/matthiasjrichter/lcars
 **Live:** https://matthiasjrichter.github.io/lcars/
