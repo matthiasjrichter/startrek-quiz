@@ -2,7 +2,7 @@
 # Star Trek Quiz
 I built this for the #10DayWebBuild challenge
 
-**Link to project:** https://matthiasjrichter.github.io/startrek-quiz/
+**See it in action here:** https://matthiasjrichter.github.io/startrek-quiz/
 
 ## How It's Made:
 
