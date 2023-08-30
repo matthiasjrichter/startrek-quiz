@@ -27,5 +27,7 @@ The design is based on https://www.thelcars.com/. But heavily modified.
 
 ## Related stuff I built:
 You might be interested in my additions to the https://www.thelcars.com/ template: 
+
 **GitHub:** https://github.com/matthiasjrichter/lcars
+
 **Live:** https://matthiasjrichter.github.io/lcars/
