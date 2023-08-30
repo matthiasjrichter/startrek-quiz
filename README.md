@@ -15,8 +15,9 @@ The design is based on https://www.thelcars.com/. But heavily modified.
 
 1. At the moment the questions are always the same. It would be nice to have a larger pool of questions and choose them randomly.
 2. Users often requested to see the correct answer when they chose the wrong answer.
-3. A leaderboard would be a nice addition and would add some backend to this project.
-4. The CSS code is very messy. There is a lot of unused CSS and I feel sorry for any programmer who wants to work with this abomination.
+3. Currently if the user is quick enough they can click another answer before being forwarded to the next question.
+4. A leaderboard would be a nice addition and would add some backend to this project.
+5. The CSS code is very messy. There is a lot of unused CSS.
 
 
 ## Lessons Learned:
